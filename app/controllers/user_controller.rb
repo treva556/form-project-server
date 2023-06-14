@@ -1,11 +1,21 @@
-class UserController < ApplicationController
+class UsersController < ApplicationController
   def new
     @user = User.new
   end
 
+  # def fetch_data
+  #   @user = User.find(params[:id])
+  #   render json: @user
+  # end
+
+  def fetch_all_data
+    @user = User.all
+    render json: @user
+  end
+
   def index
-    @users = User.all
-    render json: @users
+    @user = User.all
+    render json: @user
   end
 
   def create
