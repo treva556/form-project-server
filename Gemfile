@@ -73,3 +73,4 @@ end
 
 gem 'active_model_serializers'
 
+gem 'rack-cors'
