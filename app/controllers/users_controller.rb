@@ -3,11 +3,6 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
-  # def fetch_data
-  #   @user = User.find(params[:id])
-  #   render json: @user
-  # end
-
   def fetch_all_data
     @user = User.all
     render json: @user

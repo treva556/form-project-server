@@ -15,8 +15,7 @@
 Rails.application.routes.draw do
   # Other routes in your application
 
-  resources :user, only: [:index]
-
-  get '/user/fetch_all_data', to: 'user#fetch_all_data'
-
+  resources :users, only: [:index]
+  
+  get '/users/fetch_all_data', to: 'users#fetch_all_data'
 end
