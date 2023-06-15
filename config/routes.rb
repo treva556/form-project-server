@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
-  resources :users, only: [:index]
-  get '/users/fetch_all_data', to: 'users#fetch_all_data'
+  # Other routes in your application
+  resources :users, only: [:index, :create]
+
+  get '/users/new', to: 'users#new'
+  post '/users', to: 'users#create'
 end
